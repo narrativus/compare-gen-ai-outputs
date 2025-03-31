@@ -1,0 +1,12 @@
+openai:
+  models:
+    - gpt-4o
+    - gpt-3.5-turbo
+gemini:
+  models: []
+llama:
+  models: []
+claude:
+  models: []
+deepseek:
+  models: []
