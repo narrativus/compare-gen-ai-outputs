@@ -2,10 +2,14 @@ openai:
   models:
     - gpt-4o
     - gpt-3.5-turbo
+meta:
+  models:
+    - meta-default
+    - meta-v2
 gemini:
-  models: []
-llama:
-  models: []
+  models: []   # placeholders for the future
+mistral:
+  models: []   # placeholders for the future
 claude:
   models: []
 deepseek:
