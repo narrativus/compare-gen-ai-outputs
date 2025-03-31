@@ -4,7 +4,21 @@ Compare Gen AI Outputs is a project designed to experiment with and compare the 
 
 ## Project Structure
 
-genai-tester/ ├── .gitignore ├── README.md ├── .env # Stores API keys (do not commit) ├── pyproject.toml # Managed by Poetry ├── poetry.lock # Managed by Poetry ├── config/ │ └── models_config.yaml # Catalog of available models ├── src/ │ ├── init.py │ └── model_interface.py # Functions to interface with various models ├── notebooks/ │ └── gen_ai_models.ipynb # Notebook to test different Gen AI models └── logs/ └── reasoning.log # Log file for verbose chain-of-thought outputs
+genai-tester/
+├── .gitignore
+├── README.md
+├── .env                  # (For secrets, not committed)
+├── pyproject.toml        # Managed by Poetry
+├── poetry.lock           # Managed by Poetry
+├── config/
+│   └── models_config.yaml   # Holds catalog of available models, etc.
+├── src/
+│   ├── __init__.py
+│   └── model_interface.py   # Code for interfacing with various models
+├── notebooks/
+│   └── gen_ai_models.ipynb    # Notebook to try out different Gen AI models
+└── logs/
+    └── reasoning.log      # File to store verbose chain-of-thought outputs
 
 
 ## Setup Instructions
