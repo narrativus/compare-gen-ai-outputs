@@ -1,0 +1,23 @@
+[project]
+name = "compare-gen-ai-outputs"
+version = "0.1.0"
+description = "Compare the output of two different Gen AI models."
+authors = [
+    {name = "Alejandro Berrizbeitia",email = "narrativus@proton.me"}
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "openai (>=1.70.0,<2.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)",
+    "jupyter (>=1.1.1,<2.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (>=2.2.4,<3.0.0)",
+    "langchain (>=0.3.22,<0.4.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
