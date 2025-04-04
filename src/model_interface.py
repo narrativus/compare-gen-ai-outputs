@@ -113,17 +113,16 @@ def query_meta(prompt, model="meta-default", log_verbose=True):
             )
         return simulated_response
 
-    # Construct the endpoint URL. For example, if you want to use Meta's Llama-2 chat model hosted on Hugging Face,
-    # you might use an endpoint like: "https://api-inference.huggingface.co/models/meta-llama/Llama-2-7b-chat"
-    # For now, we'll assume `model` holds the appropriate Hugging Face model identifier.
+    # Construct the endpoint URL using the provided model identifier.
     url = f"https://api-inference.huggingface.co/models/{model}"
     headers = {"Authorization": f"Bearer {HUGGINGFACE_API_KEY}"}
-    payload = {"inputs": prompt}
+    # Use the proper chat payload format for Llama-2 chat models.
+    payload = {"inputs": {"messages": [{"role": "user", "content": prompt}]}}
     try:
         response = requests.post(url, headers=headers, json=payload)
         response.raise_for_status()
         output = response.json()
-        # Assume output is a list of responses with key "generated_text"
+        # Check if the output is in the expected format:
         if (
             isinstance(output, list)
             and len(output) > 0
