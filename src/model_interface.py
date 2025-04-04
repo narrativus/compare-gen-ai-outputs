@@ -57,12 +57,12 @@ def query_openai(prompt, model="gpt-4o", log_verbose=True):
             model=model, messages=[{"role": "user", "content": prompt}]
         )
         final_output = response.choices[0].message.content
-        verbose_info = getattr(
-            response, "verbose", "No verbose chain-of-thought provided."
-        )
+        # Removed the problematic getattr line
+        # Removed the logger line that used verbose_info
+        # You can add a simple success log if needed:
         if log_verbose:
             logger.info(
-                f"OpenAI Query: Prompt: {prompt}\nVerbose Output: {verbose_info}"
+                f"OpenAI Query Successful: Prompt starting with '{prompt[:50]}...' for model {model}"
             )
         return final_output
     except Exception as e:

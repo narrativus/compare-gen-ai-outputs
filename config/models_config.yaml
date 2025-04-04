@@ -4,8 +4,8 @@ openai:
     - gpt-3.5-turbo
 meta:
   models:
-    - meta-default
-    - meta-v2
+    - meta-llama/Meta-Llama-3-8B-Instruct
+    - meta-llama/Llama-2-7b-chat-hf
 gemini:
   models: []   # placeholders for the future
 mistral:
